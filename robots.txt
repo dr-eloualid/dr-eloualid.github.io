@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://75zb9rdtrp-ops.github.io/sitemap.xml
