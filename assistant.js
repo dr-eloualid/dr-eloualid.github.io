@@ -93,8 +93,8 @@
       kw: ['adresse', 'comment venir', 'comment aller', 'ou est', 'ou se trouve', 'ou etes', 'ou vous', 'situe', 'trouver le cabinet', 'localisation', 'itineraire', 'plan$', 'maps', 'carte$', 'acces',
            'parking', 'etage', 'quartier', 'fin$', 'fine$', 'fin kayn', 'blasa', 'blassa', '3onwan', 'l3onwan',
            'فين', 'اين', 'عنوان', 'بلاصه', 'مكان', 'موقع', 'كيفاش نوصل', 'الطريق', 'خريطه'],
-      fr: function () { return 'Le cabinet se trouve Immeuble Irak, appartement 1 — 6 boulevard Allal El Fassi, 1er étage, Taza.'; },
-      ar: function () { return 'العيادة في عمارة العراق، الشقة 1 — 6 شارع علال الفاسي، الطابق الأول، تازة.'; },
+      fr: function () { return 'Le cabinet se trouve boulevard Allal El Fassi, Immeuble Irak 1, appartement 6, 1er étage, Taza.'; },
+      ar: function () { return 'العيادة في شارع علال الفاسي، عمارة العراق 1، الشقة 6، الطابق الأول، تازة.'; },
       actions: ['maps'] },
 
     { id: 'horaires',
