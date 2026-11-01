@@ -88,6 +88,10 @@ button{font-family:inherit}
 .topnav a:hover{color:var(--gold)}
 .lang{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 13px;font-family:"Tajawal",sans-serif;font-weight:700}
 @media(max-width:840px){.topnav a:not(.lang){display:none}}
+/* Téléphone : bandeau sur une ligne (sur 375 px le nom passait sur 2 lignes et chevauchait « Ouvert ») ; le nom du médecin reste dans le titre */
+@media(max-width:480px){.brand{gap:8px}.brand .mark{width:30px;height:30px}.brand .bt i{display:none}.brand .bt b{white-space:nowrap;font-size:15.5px}.brand .bt small{white-space:nowrap;letter-spacing:.06em}.topnav{gap:6px}.topnav .lang{padding:4px 9px}}
+@media(max-width:370px){.brand .bt b{font-size:14.5px}.brand .bt small{letter-spacing:.02em;font-size:8px}.topnav{gap:5px}.topnav .lang{padding:3px 7px}}
+@media(max-width:340px){.brand .mark{display:none}}
 
 /* ═══ HERO (C) + badge direct (D) + parallaxe ═══ */
 .hero{position:relative;min-height:97vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:86px 0 40px;text-align:center}

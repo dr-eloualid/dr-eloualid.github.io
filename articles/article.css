@@ -30,7 +30,8 @@ a{color:inherit;text-decoration:none}
 .topnav .rdv{background:var(--wa);color:#fff;font-weight:600;padding:8px 15px;border-radius:999px}
 .topnav .rdv:hover{color:#fff;box-shadow:0 8px 22px rgba(31,168,85,.4)}
 @media(max-width:760px){.topnav a.nav{display:none}}
-@media(max-width:430px){.topnav .lang{display:none}.brand .bt small{letter-spacing:.12em}}
+/* Téléphone : le bouton fixe du bas porte déjà le rendez-vous ; le bandeau garde le changement de langue */
+@media(max-width:430px){.topnav .rdv{display:none}.brand .bt small{letter-spacing:.12em}}
 
 /* Titre : ivoire + skyline de Taza (inchangée) */
 .article-hero{position:relative;padding:44px 0 92px;border-bottom:1px solid var(--line);
@@ -99,3 +100,16 @@ footer a{color:var(--gold-soft)}
   .sticky-cta a{display:flex;align-items:center;justify-content:center;gap:9px;background:var(--wa);color:#fff;font-weight:700;font-size:15px;padding:14px;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.3)}
   body{padding-bottom:78px}
 }
+
+/* ═══ Arabe (droite à gauche) — pages *-ar.html ═══ */
+html[dir="rtl"] body{font-family:"Tajawal","IBM Plex Sans",system-ui,sans-serif;font-size:17.5px;line-height:1.9}
+html[dir="rtl"] .brand .bt b,html[dir="rtl"] .article-hero h1,html[dir="rtl"] .article-body h2,html[dir="rtl"] .article-body .lead,
+html[dir="rtl"] .article-cta h3,html[dir="rtl"] .aussi h2,html[dir="rtl"] .art h3,html[dir="rtl"] footer b{font-family:"Tajawal",sans-serif;font-weight:700;letter-spacing:0}
+html[dir="rtl"] .article-body .lead{font-weight:500}
+html[dir="rtl"] .brand .bt small,html[dir="rtl"] .eyebrow,html[dir="rtl"] .art .tag{letter-spacing:0;font-size:12.5px}
+html[dir="rtl"] .article-body ul,html[dir="rtl"] .article-body ol{padding-left:0;padding-right:1.4em}
+html[dir="rtl"] .callout{border-left:1px solid var(--line);border-right:4px solid var(--gold)}
+html[dir="rtl"] .callout.warn{border-right-color:var(--alerte)}
+html[dir="rtl"] .article-body th,html[dir="rtl"] .article-body td{text-align:right}
+html[dir="rtl"] .topnav .lang-fr{font-family:"IBM Plex Sans",sans-serif;font-weight:600}
+html[dir="rtl"] [dir="ltr"]{unicode-bidi:isolate;white-space:nowrap}   /* numéros jamais coupés en deux */

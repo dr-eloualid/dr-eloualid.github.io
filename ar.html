@@ -118,6 +118,10 @@ button{font-family:inherit}
 .topnav a:hover{color:var(--gold)}
 .lang{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 13px;font-weight:700;font-size:12.5px}
 @media(max-width:840px){.topnav a:not(.lang){display:none}}
+/* Téléphone : bandeau sur une ligne (sur 375 px le nom passait sur 3 lignes et chevauchait « مغلق ») ; le nom du médecin reste dans le texte d'accueil */
+@media(max-width:480px){.brand{gap:8px}.brand .mark{width:30px;height:30px}.brand .bt{line-height:1.3}.brand .bt i{display:none}.brand .bt b{white-space:nowrap;font-size:14.5px}.brand .bt small{white-space:nowrap;font-size:9.5px}.topnav{gap:6px}.topnav .lang{padding:4px 8px;font-size:12px}}
+@media(max-width:370px){.brand .bt b{font-size:13.5px}.brand .bt small{font-size:9px}.topnav{gap:5px}.topnav .lang{padding:3px 7px;font-size:11.5px}}
+@media(max-width:340px){.brand .mark{display:none}}
 
 /* HERO */
 .hero{position:relative;min-height:97vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:86px 0 40px;text-align:center}
@@ -224,6 +228,14 @@ details.dom h3{font-weight:800;font-size:19.5px;color:var(--navy2);flex:1}
 details.dom .plus{color:#8a6d14;font-size:20px;font-weight:300;transition:transform .25s;line-height:1}
 details.dom[open] .plus{transform:rotate(45deg)}
 details.dom .body{padding:0 56px 18px 4px;font-size:14.5px;color:var(--ink-soft);animation:sp .3s ease}
+details.dom .body a{color:var(--petrol-deep);font-weight:700;font-size:13.5px}
+.art-grid{margin-top:36px;display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:13px;text-align:right}
+.art{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:23px 21px;display:flex;flex-direction:column;gap:9px;transition:transform .18s,box-shadow .2s}
+.art:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(22,49,58,.1)}
+.art .tag{font-size:12.5px;color:var(--gold-deep);font-weight:800}
+.art h3{font-family:"Tajawal",sans-serif;font-weight:700;font-size:19px;line-height:1.4;color:var(--navy2)}
+.art p{font-size:14.5px;color:var(--ink-soft);flex:1}
+.art .lire{font-size:14px;font-weight:700;color:var(--petrol-deep)}
 
 /* EXAMENS */
 .ex-grid{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:13px;text-align:right}
@@ -445,13 +457,13 @@ footer a{color:var(--gold-soft)}
     <h2 class="rv">خبرة تشمل المشاكل اليومية كما الحالات المعقدة.</h2>
     <p class="section-lead rv">المسوا المجال لمعرفة المزيد — الاستشارة بالعربية والفرنسية.</p>
     <div class="doms">
-      <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M12 7 C7.5 7 5.5 10.5 6.5 14 C7.3 16.8 9.5 18.5 12 18.5 C14.5 18.5 16.7 16.8 17.5 14 C18.5 10.5 16.5 7 12 7 Z"/></svg></span><h3>البروستاتا</h3><span class="plus">＋</span></summary><div class="body">التضخم الحميد، الكشف المبكر عن السرطان، التهاب البروستاتا المزمن. تحليل PSA، الرنين المغناطيسي، والخزعات الموجهة بالإيكو في العيادة.</div></details>
-      <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><path d="M14.5 4.5 C9.5 4.5 6.5 8 6.5 12 C6.5 16 9.5 19.5 13.5 19.5 C15.5 19.5 16.3 18 15.3 16.6 C13.9 14.8 13.9 9.2 15.3 7.4 C16.3 6 15.9 4.5 14.5 4.5 Z"/><path d="M15.5 12 C17.2 12.3 17.5 13.8 17.5 15.5 V19.5"/><path d="M10.3 10.6 l1.5 1.7 -1.5 1.7 -1.5 -1.7 Z"/></svg></span><h3>حصى الكلي والمسالك</h3><span class="plus">＋</span></summary><div class="body">المغص الكلوي، الحصى البولية : علاج دوائي، الليزر، تنظير الحالب، والوقاية من عودتها.</div></details>
+      <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M12 7 C7.5 7 5.5 10.5 6.5 14 C7.3 16.8 9.5 18.5 12 18.5 C14.5 18.5 16.7 16.8 17.5 14 C18.5 10.5 16.5 7 12 7 Z"/></svg></span><h3>البروستاتا</h3><span class="plus">＋</span></summary><div class="body">التضخم الحميد، الكشف المبكر عن السرطان، التهاب البروستاتا المزمن. تحليل PSA، الرنين المغناطيسي، والخزعات الموجهة بالإيكو في العيادة. <a href="articles/psa-prostate-ar.html">اقرؤوا: ماذا يعني ارتفاع PSA؟ ←</a></div></details>
+      <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><path d="M14.5 4.5 C9.5 4.5 6.5 8 6.5 12 C6.5 16 9.5 19.5 13.5 19.5 C15.5 19.5 16.3 18 15.3 16.6 C13.9 14.8 13.9 9.2 15.3 7.4 C16.3 6 15.9 4.5 14.5 4.5 Z"/><path d="M15.5 12 C17.2 12.3 17.5 13.8 17.5 15.5 V19.5"/><path d="M10.3 10.6 l1.5 1.7 -1.5 1.7 -1.5 -1.7 Z"/></svg></span><h3>حصى الكلي والمسالك</h3><span class="plus">＋</span></summary><div class="body">المغص الكلوي، الحصى البولية : علاج دوائي، الليزر، تنظير الحالب، والوقاية من عودتها. <a href="articles/calculs-renaux-ar.html">اقرؤوا: 5 قواعد للوقاية من الحصى ←</a></div></details>
       <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><path d="M5.5 9.5 C5.5 6 18.5 6 18.5 9.5 C18.5 13.5 15.6 16 12 16 C8.4 16 5.5 13.5 5.5 9.5 Z"/><path d="M12 16 v2.5"/><path d="M9 20.5 c-.7 1 -.7 1.8 0 2.3 c.7 -.5 .7 -1.3 0 -2.3 Z"/><path d="M15 20.5 c-.7 1 -.7 1.8 0 2.3 c.7 -.5 .7 -1.3 0 -2.3 Z"/></svg></span><h3>سلس البول واضطرابات التبول</h3><span class="plus">＋</span></summary><div class="body">تسرب البول، فرط نشاط المثانة، التبول اللاإرادي عند الطفل. فحص ديناميكية المثانة (Bilan urodynamique) في العيادة، ترويض، علاج دوائي أو جراحي.</div></details>
       <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><circle cx="10" cy="14" r="5.5"/><path d="M14 10 L20 4"/><path d="M15.5 4 H20 V8.5"/></svg></span><h3>صحة الرجل</h3><span class="plus">＋</span></summary><div class="body">ضعف الانتصاب، عقم الزوجين، دوالي الخصية، نقص الهرمون — استشارة في سرية تامة.</div></details>
       <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><path d="M12 3 C9.2 6.8 9.2 9.6 12 12.6 C14.8 9.6 14.8 6.8 12 3 Z"/><path d="M10.6 11.2 L7.2 20"/><path d="M13.4 11.2 L16.8 20"/></svg></span><h3>أورام المسالك البولية</h3><span class="plus">＋</span></summary><div class="body">الكلي، المثانة، البروستاتا، الخصية : التشخيص، الجراحة، والمتابعة المنسقة.</div></details>
       <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.4"/><path d="M6.5 20.5 C6.5 15.8 9 13.2 12 13.2 C15 13.2 17.5 15.8 17.5 20.5"/></svg></span><h3>مسالك الأطفال</h3><span class="plus">＋</span></summary><div class="body">الختان، ضيق القلفة، الفتق، القيلة المائية، التشوهات، التبول اللاإرادي — برفق وبيداغوجية مع الطفل ووالديه.</div></details>
-      <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5.2"/><path d="M12 13.7 V21"/><path d="M9 17.8 h6"/></svg></span><h3>جراحة المرأة</h3><span class="plus">＋</span></summary><div class="body">هبوط المثانة، السقوط التناسلي، سلس الجهد، والتهابات البول المتكررة.</div></details>
+      <details class="dom rv"><summary><span class="n"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5.2"/><path d="M12 13.7 V21"/><path d="M9 17.8 h6"/></svg></span><h3>جراحة المرأة</h3><span class="plus">＋</span></summary><div class="body">هبوط المثانة، السقوط التناسلي، سلس الجهد، والتهابات البول المتكررة. <a href="articles/cystite-ar.html">اقرؤوا: التهاب المثانة المتكرّر ←</a></div></details>
     </div>
   </div>
 </section>
@@ -491,6 +503,20 @@ footer a{color:var(--gold-soft)}
     <article class="vid"><div class="video-poster" data-yt="UojAaaQ3FQ0"><span class="play">▶</span></div><div class="vid-body"><h3>ما هي دوالي الخصية؟</h3><p>شرح مبسط لدوالي الخصية.</p></div></article>
   </div>
   <p class="yt-more rv">▶ كل الفيديوهات على <a href="https://www.youtube.com/channel/UCzK8FU2B46n0EKbxVtEmukA" target="_blank" rel="noopener">قناة العيادة على يوتيوب</a>.</p>
+</section>
+
+<!-- ═══ ARTICLES ═══ -->
+<section class="light center" id="conseils">
+  <div class="container">
+    <div class="rv"><span class="eyebrow">نصائح ووقاية</span></div>
+    <h2 class="rv">افهموا صحتكم بشكل أفضل</h2>
+    <div class="art-grid">
+      <a class="art rv" href="articles/calculs-renaux-ar.html"><span class="tag">الوقاية</span><h3>حصى الكلى: 5 قواعد للوقاية</h3><p>كيف نحمي الكلى: الماء، الملح، التغذية.</p><span class="lire">اقرؤوا المقال ←</span></a>
+      <a class="art rv" href="articles/psa-prostate-ar.html"><span class="tag">الكشف المبكر</span><h3>PSA: ماذا يعني ارتفاعه؟</h3><p>فهم نتيجتكم دون هلع.</p><span class="lire">اقرؤوا المقال ←</span></a>
+      <a class="art rv" href="articles/cystite-ar.html"><span class="tag">المرأة</span><h3>التهاب المثانة المتكرّر عند المرأة</h3><p>الأسباب، الفحوصات، العلاج والوقاية.</p><span class="lire">اقرؤوا المقال ←</span></a>
+      <a class="art rv" href="articles/prostatectomie-ar.html"><span class="tag">بعد العملية</span><h3>الحياة بعد استئصال البروستاتا</h3><p>التعافي، التحكم في البول، الحياة الجنسية، المتابعة.</p><span class="lire">اقرؤوا المقال ←</span></a>
+    </div>
+  </div>
 </section>
 
 <!-- MÉDECIN -->
